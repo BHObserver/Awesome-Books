@@ -1,0 +1,6 @@
+const library = [
+  {
+    title: '',
+    author: '',
+  },
+];
