@@ -6,16 +6,21 @@ const book = {
 const add = document.querySelector('.add');
 add.addEventListener('click', () => {
   const title = document.querySelector('#title').value;
-  const books = document.querySelector('.books');
+  const displayBooksContainer = document.querySelector('.display-books-container');
   const author = document.querySelector('#author').value;
-  const displayTitle = document.createElement('h3');
-  const displayAuthor = document.createElement('h5');
+  const displayBook = document.createElement('div');
+  const displayTitle = document.createElement('h2');
+  const displayAuthor = document.createElement('h3');
   const removeBtn = document.createElement('button');
-  books.appendChild(displayTitle);
-  books.appendChild(displayAuthor);
-  books.appendChild(removeBtn);
+  const underline = document.createElement('hr');
+  underline.classList.add('underline');
+  displayBook.appendChild(displayTitle);
+  displayBook.appendChild(displayAuthor);
+  displayBook.appendChild(removeBtn);
+  displayBook.appendChild(underline);
+  displayBooksContainer.appendChild(displayBook);
   removeBtn.classList.add('remove');
-  removeBtn.innerText = 'Remove'
+  removeBtn.innerText = 'Remove';
   book.title = title;
   book.author = author;
   library.push(book);
