@@ -29,7 +29,7 @@
 # 📖 BH-Observer Portfolio <a name="about-project"></a>
 
 
-**Portfolio** is a website that is used to showcase the projects and abilities.
+**Awesome Books** is a single page website to make a list of books and has the functionality to add and remove books from the list.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -41,15 +41,15 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Mobile First**
-- **Responsive**
 - **Navigation Bar**
-- **Contact Info**
+- **Saves data in local-storage**
+- **Makes a list of books**
+- **Adds and removes a book**
 
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link](https://bhobserver.github.io/projects/portfolio/index.html)
+- [Live Demo Link](isNotAddedYet)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,17 +91,21 @@ Example commands:
 
 ## 👥 Author <a name="authors"></a>
 
+👤 **Umuhan Mohamud**
+
+- GitHub: [@bhobserver](https://github.com/Umuhan)
 
 👤 **Burhan Uddin**
 
 - GitHub: [@bhobserver](https://github.com/bhobserver)
 
 
+
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-**[Desktop Version Changes]**
+**Desktop Version**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
