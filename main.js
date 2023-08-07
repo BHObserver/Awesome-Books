@@ -15,6 +15,7 @@ add.addEventListener('click', () => {
   books.appendChild(displayAuthor);
   books.appendChild(removeBtn);
   removeBtn.classList.add('remove');
+  removeBtn.innerText = 'Remove'
   book.title = title;
   book.author = author;
   library.push(book);
