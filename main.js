@@ -1,5 +1,31 @@
 const add = document.querySelector('.add');
-let library = [];
+
+let library = JSON.parse(localStorage.getItem('library')) || [];
+
+const title = document.querySelector('#title').value;
+const author = document.querySelector('#author').value;
+
+const displayBooksContainer = document.querySelector('.display-books-container');
+
+const displayBook = document.createElement('div');
+displayBook.classList.add('display-book');
+
+const displayTitle = document.createElement('h2');
+displayBook.appendChild(displayTitle);
+
+const displayAuthor = document.createElement('h3');
+displayBook.appendChild(displayAuthor);
+
+const removeBtn = document.createElement('button');
+displayBook.appendChild(removeBtn);
+removeBtn.classList.add('remove');
+removeBtn.innerText = 'Remove';
+
+const underline = document.createElement('hr');
+underline.classList.add('underline');
+displayBook.appendChild(underline);
+
+displayBooksContainer.appendChild(displayBook);
 
 /* Adds a book in the library */
 add.addEventListener('click', () => {
@@ -7,31 +33,11 @@ add.addEventListener('click', () => {
     title: '',
     author: '',
   };
-  const title = document.querySelector('#title').value;
-  const author = document.querySelector('#author').value;
 
-  const displayBooksContainer = document.querySelector('.display-books-container');
-
-  const displayBook = document.createElement('div');
-  displayBook.classList.add('display-book');
-
-  const displayTitle = document.createElement('h2');
-  displayBook.appendChild(displayTitle);
-
-  const displayAuthor = document.createElement('h3');
-  displayBook.appendChild(displayAuthor);
-
-  const removeBtn = document.createElement('button');
-  displayBook.appendChild(removeBtn);
-  removeBtn.classList.add('remove');
-  removeBtn.innerText = 'Remove';
-
-  const underline = document.createElement('hr');
-  underline.classList.add('underline');
-  displayBook.appendChild(underline);
-
-  displayBooksContainer.appendChild(displayBook);
-
+  /* Save to local Storage */
+  if (localStorage.library) {
+    localStorage.setItem('library', JSON.stringify(library));
+  }
   book.title = title;
   book.author = author;
   library.push(book);
@@ -47,9 +53,10 @@ add.addEventListener('click', () => {
       const targetAuthor = children[1].innerText;
       element.parentElement.remove();
       library = library.filter((b) => b.title !== targetTitle || b.author !== targetAuthor);
+      /* Update local Storage */
+      if (localStorage.library) {
+        localStorage.setItem('library', JSON.stringify(library));
+      }
     });
   });
 });
-
-/* Save to local Storage */
-localStorage.setItem('library', JSON.stringify(library));
