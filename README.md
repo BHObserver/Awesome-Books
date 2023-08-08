@@ -29,7 +29,7 @@
 # 📖 Awesome Books <a name="about-project"></a>
 
 
-**Awesome Books** is a single page website to make a list of books and has the functionality to add and remove books from the list.
+**Awesome Books** is a website to make a list of books and has the functionality to add and remove books from the list.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -106,7 +106,9 @@ Example commands:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-**Desktop Version**
+-**Desktop Version**
+-**More Methods**
+-**Well-Designed Graphical User Interface**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
