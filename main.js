@@ -14,6 +14,7 @@ add.addEventListener('click', () => {
   const removeBtn = document.createElement('button');
   const underline = document.createElement('hr');
   underline.classList.add('underline');
+  displayBook.classList.add('display-book');
   displayBook.appendChild(displayTitle);
   displayBook.appendChild(displayAuthor);
   displayBook.appendChild(removeBtn);
