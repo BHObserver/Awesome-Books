@@ -8,13 +8,17 @@
     height: 515px;
 }
 
-.library-container h1 {
-    margin-right: 100px;
-}
-
 .display-books-container {
     display: flex;
     flex-direction: column;
+    width: 50%;
+}
+
+.headline {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: start;
     width: 50%;
 }
 
