@@ -50,3 +50,6 @@ add.addEventListener('click', () => {
     });
   });
 });
+
+/* Save to local Storage */
+localStorage.setItem('library', JSON.stringify(library));
