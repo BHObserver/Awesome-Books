@@ -106,9 +106,9 @@ Example commands:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
--**Desktop Version**
--**More Methods**
--**Well-Designed Graphical User Interface**
+- **Desktop Version**
+- **More Methods**
+- **Well-Designed Graphical User Interface**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
