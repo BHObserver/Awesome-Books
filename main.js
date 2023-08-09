@@ -10,7 +10,7 @@ add.addEventListener('click', () => {
     author: '',
   };
 
-  const title = document.querySelector('#title').value;
+  const title = `"${document.querySelector('#title').value}" by`;
   const author = document.querySelector('#author').value;
 
   const displayBooksContainer = document.querySelector('.display-books-container');
@@ -18,20 +18,24 @@ add.addEventListener('click', () => {
   const displayBook = document.createElement('div');
   displayBook.classList.add('display-book');
 
-  const displayTitle = document.createElement('h2');
-  displayBook.appendChild(displayTitle);
+  const displayBookDetails = document.createElement('div');
+  displayBookDetails.classList.add('display-book-details');
+  displayBook.appendChild(displayBookDetails);
 
-  const displayAuthor = document.createElement('h3');
-  displayBook.appendChild(displayAuthor);
+  const displayTitle = document.createElement('h4');
+  displayBookDetails.appendChild(displayTitle);
+
+  const displayAuthor = document.createElement('h5');
+  displayBookDetails.appendChild(displayAuthor);
 
   const removeBtn = document.createElement('button');
   displayBook.appendChild(removeBtn);
   removeBtn.classList.add('remove');
   removeBtn.innerText = 'Remove';
 
-  const underline = document.createElement('hr');
+  /* const underline = document.createElement('hr');
   underline.classList.add('underline');
-  displayBook.appendChild(underline);
+  displayBook.appendChild(underline); */
 
   displayBooksContainer.appendChild(displayBook);
 
