@@ -1,6 +1,10 @@
 body {
   background: black;
   color: white;
+  background: url(images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 1px 2px 3px #000;
 }
 
 .library-container {
@@ -22,14 +26,14 @@ body {
 .display-books-container {
   display: flex;
   flex-direction: column;
-  background: repeating-linear-gradient(90deg, rgb(69, 225, 124), rgb(42, 197, 224));;
-  width: 70%;
+  /* background: repeating-linear-gradient(90deg, rgb(69, 225, 124), rgb(42, 197, 224)); */
+  width: 50%;
   height: 40%;
   max-height: 100%;
-  border: 3px solid rgb(15, 108, 136);
+  border: 20px solid rgba(11, 175, 230, 0.641);
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 1px 2px 3px black;
+  box-shadow: 1px 2px 3px rgb(0, 0, 0);
 }
 
 .display-book {
@@ -43,7 +47,7 @@ body {
   display: flex;
   align-items: center;
   margin-right: 6px;
-  background: rgb(55, 55, 216);
+  background: rgba(55, 55, 216, 0.592);
   padding: 0 3px 0 3px;
   width: 100%;
   color: rgb(254, 254, 254);
@@ -54,21 +58,16 @@ body {
 }
 
 .display-book button {
-  background: rgb(55, 55, 216);
+  background: rgba(55, 55, 216, 0.592);
   color: rgb(254, 254, 254);
   border: 1px solid white;
   border-radius: 5px;
-  box-shadow: 1px 2px 4px black;
-  text-shadow: 1px 2px 4px rgb(5, 5, 5);
+  box-shadow: 1px 2px 3px black;
+  text-shadow: 1px 2px 3px rgb(5, 5, 5);
 }
 
 .display-book button:active {
-  background: rgb(250, 109, 15);
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(34, 30, 30);
-  border-radius: 5px;
-  box-shadow: 1px 2px 4px black;
-  text-shadow: 1px 2px 2px rgb(9, 9, 9);
+  background: rgba(250, 109, 15, 0.592);
 } 
 
 .underline {
@@ -85,19 +84,36 @@ body {
 
 .input-container input {
   max-width: 280px;
-  width: 250px;
+  padding: 10px;
+  width: 270px;
   height: 20px;
   margin: 5px 0 5px 0;
-}
-
-.input-container button {
-  width: fit-content;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 1px 2px 3px rgb(0, 0, 0);
 }
 
 .add-btn-container {
   display: flex;
   justify-content: end;
-  width: 255px;
+  width: 285px;
+  margin-top: 5px;
+}
+
+.input-container button {
+  width: 80px;
+  height: 30px;
+  background: rgb(55, 55, 216);
+  color: rgb(254, 254, 254);
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px black;
+  text-shadow: 1px 2px 4px rgb(5, 5, 5);
+}
+
+.input-container button:active {
+  background: rgba(250, 109, 15, 0.592);
 }
 
 h4 {
@@ -107,7 +123,7 @@ h4 {
 }
 
 h5 {
-  margin: 4px 0 0 0;
+  margin: 8px 0 0 0;
   padding-bottom: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
