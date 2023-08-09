@@ -22,6 +22,9 @@ add.addEventListener("click", () => {
   const displayBook = document.createElement("div");
   displayBook.classList.add("display-book");
 
+  const displayTitle = document.createElement("h2");
+  displayBook.appendChild(displayTitle);
+
   const displayAuthor = document.createElement("h3");
   displayBook.appendChild(displayAuthor);
 
