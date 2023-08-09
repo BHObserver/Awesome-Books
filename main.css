@@ -10,6 +10,12 @@
   height: 100%;
 }
 
+.display-books-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
 .headline {
   display: flex;
   flex-direction: column-reverse;
