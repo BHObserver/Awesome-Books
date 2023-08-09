@@ -1,3 +1,8 @@
+body {
+  background: black;
+  color: white;
+}
+
 .library-container {
   display: flex;
   flex-direction: column;
@@ -5,45 +10,83 @@
   align-items: center;
   font-family: 'Courier New', Courier, monospace;
   margin-top: 10%;
-  margin-left: 12%;
-  width: 75%;
-  height: 100%;
+}
+
+.headline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .display-books-container {
   display: flex;
   flex-direction: column;
-  width: 50%;
-}
-
-.headline {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: start;
-  align-items: start;
-  width: 50%;
+  background: repeating-linear-gradient(90deg, rgb(69, 225, 124), rgb(42, 197, 224));;
+  width: 70%;
+  height: 40%;
+  max-height: 100%;
+  border: 3px solid rgb(15, 108, 136);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 3px black;
 }
 
 .display-book {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
   width: 100%;
 }
 
-.books button {
-  width: fit-content;
+.display-book-details {
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+  background: rgb(55, 55, 216);
+  padding: 0 3px 0 3px;
+  width: 100%;
+  color: rgb(254, 254, 254);
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px black;
+  text-shadow: 1px 2px 4px rgb(5, 5, 5);
 }
+
+.display-book button {
+  background: rgb(55, 55, 216);
+  color: rgb(254, 254, 254);
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px black;
+  text-shadow: 1px 2px 4px rgb(5, 5, 5);
+}
+
+.display-book button:active {
+  background: rgb(250, 109, 15);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(34, 30, 30);
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px black;
+  text-shadow: 1px 2px 2px rgb(9, 9, 9);
+} 
 
 .underline {
-  width: 100%;
+  margin-top: 20px;
+  width: 20%;
 }
 
 .input-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 50%;
 }
 
 .input-container input {
-  max-width: 180px;
+  max-width: 280px;
+  width: 250px;
+  height: 20px;
   margin: 5px 0 5px 0;
 }
 
@@ -51,14 +94,23 @@
   width: fit-content;
 }
 
-h2,
-h3 {
-  margin: 0;
-  padding-bottom: 10px;
+.add-btn-container {
+  display: flex;
+  justify-content: end;
+  width: 255px;
 }
 
-h3 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
+h4 {
+  margin: 8px 10px 0 0;
+  padding-bottom: 10px;
+  text-transform: capitalize;
 }
+
+h5 {
+  margin: 4px 0 0 0;
+  padding-bottom: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
