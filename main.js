@@ -33,10 +33,6 @@ add.addEventListener('click', () => {
   removeBtn.classList.add('remove');
   removeBtn.innerText = 'Remove';
 
-  /* const underline = document.createElement('hr');
-  underline.classList.add('underline');
-  displayBook.appendChild(underline); */
-
   displayBooksContainer.appendChild(displayBook);
 
   book.title = title;
