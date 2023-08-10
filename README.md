@@ -26,10 +26,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 BH-Observer Portfolio <a name="about-project"></a>
+# 📖 Awesome Books <a name="about-project"></a>
 
 
-**Awesome Books** is a single page website to make a list of books and has the functionality to add and remove books from the list.
+**Awesome Books** is a website to make a list of books and has the functionality to add and remove books from the list.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -37,6 +37,7 @@
 <ul>
   <li>HTML5</li>
   <li>CSS3</li>
+  <li>JavaScript</li>
 </ul>
 
 ### Key Features <a name="key-features"></a>
@@ -49,7 +50,7 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link](isNotAddedYet)
+- [Live Demo Link]**is Not Added Yet**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,7 +81,7 @@ Example commands:
 ```sh
   cd my-folder
 
-  git clone https://github.com/BHObserver/my-portfolio.git
+  git clone https://github.com/BHObserver/awesome-books.git
   
   cd Portfolio
 ```
@@ -93,7 +94,7 @@ Example commands:
 
 👤 **Umuhan Mohamud**
 
-- GitHub: [@bhobserver](https://github.com/Umuhan)
+- GitHub: [@Umuhan](https://github.com/Umuhan)
 
 👤 **Burhan Uddin**
 
@@ -105,7 +106,9 @@ Example commands:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-**Desktop Version**
+- **Desktop Version**
+- **More Methods**
+- **Well-Designed Graphical User Interface**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
