@@ -66,13 +66,13 @@ function removeItem() {
         (b) => b.title !== targetTitle || b.author !== targetAuthor,
       );
     });
+    /* Update Local Storage */
+    localStorage.setItem(
+      'collections',
+      JSON.stringify(displayBooksContainer.innerHTML),
+    );
+    localStorage.setItem('library', JSON.stringify(library));
   });
-  /* Update Local Storage */
-  localStorage.setItem(
-    'collections',
-    JSON.stringify(displayBooksContainer.innerHTML),
-  );
-  localStorage.setItem('library', JSON.stringify(library));
 }
 
 window.onclick = () => {
