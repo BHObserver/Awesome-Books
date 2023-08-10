@@ -50,17 +50,22 @@ add.addEventListener('click', () => {
 function removeItem() {
   allRemoves = document.querySelectorAll('.remove');
   allRemoves.forEach((element) => {
-    element.addEventListener(('click'), () => {
+    element.addEventListener('click', () => {
       const children = element.parentElement.childNodes;
       const targetTitle = children[0].innerText;
       const targetAuthor = children[1].innerText;
       element.parentElement.remove();
-      library = library.filter((b) => b.title !== targetTitle || b.author !== targetAuthor);
+      library = library.filter(
+        (b) => b.title !== targetTitle || b.author !== targetAuthor,
+      );
     });
-    /* Update Local Storage */
-    localStorage.setItem('collections', JSON.stringify(displayBooksContainer.innerHTML));
-    localStorage.setItem('library', JSON.stringify(library));
   });
+  /* Update Local Storage */
+  localStorage.setItem(
+    'collections',
+    JSON.stringify(displayBooksContainer.innerHTML),
+  );
+  localStorage.setItem('library', JSON.stringify(library));
 }
 
 window.onclick = () => {
