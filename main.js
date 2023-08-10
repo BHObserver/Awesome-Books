@@ -47,7 +47,7 @@ add.addEventListener('click', () => {
 });
 
 /* Removes a book from the library */
-function remove() {
+function removeItem() {
   allRemoves = document.querySelectorAll('.remove');
   allRemoves.forEach((element) => {
     element.addEventListener(('click'), () => {
@@ -64,11 +64,11 @@ function remove() {
 }
 
 window.onclick = () => {
-  remove();
+  removeItem();
 };
 
 window.onload = () => {
-  remove();
+  removeItem();
 };
 
 function revive() {
