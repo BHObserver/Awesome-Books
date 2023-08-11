@@ -6,17 +6,21 @@ const displayBooksContainer = document.querySelector('.display-books-container')
 /* Adds a book in the library */
 add.addEventListener('click', () => {
   const book = {
+    id: '',
     title: '',
     author: '',
   };
 
-  const title = `"${document.querySelector('#title').value}" by`;
+  book.id = Math.floor(Math.random() * Date.now()).toString(16);
+
+  const title = `"${document.querySelector('#title').value}"`;
   const author = document.querySelector('#author').value;
 
   const displayBooksContainer = document.querySelector('.display-books-container');
 
   const displayBook = document.createElement('div');
   displayBook.classList.add('display-book');
+  displayBook.id = book.id;
 
   const displayBookDetails = document.createElement('div');
   displayBookDetails.classList.add('display-book-details');
@@ -24,6 +28,10 @@ add.addEventListener('click', () => {
 
   const displayTitle = document.createElement('h4');
   displayBookDetails.appendChild(displayTitle);
+
+  const span = document.createElement('span');
+  span.innerText = 'by';
+  displayBookDetails.appendChild(span);
 
   const displayAuthor = document.createElement('h5');
   displayBookDetails.appendChild(displayAuthor);
@@ -51,16 +59,20 @@ function removeItem() {
   allRemoves = document.querySelectorAll('.remove');
   allRemoves.forEach((element) => {
     element.addEventListener(('click'), () => {
-      const children = element.parentElement.childNodes;
+      const children = element.parentElement.firstChild.childNodes;
+      const { id } = element.parentElement;
       const targetTitle = children[0].innerText;
-      const targetAuthor = children[1].innerText;
+      const targetAuthor = children[2].innerText;
       element.parentElement.remove();
-      library = library.filter((b) => b.title !== targetTitle || b.author !== targetAuthor);
+      library = library.filter((b) => b.id !== id
+              || b.title !== targetTitle
+              || b.author !== targetAuthor);
+      console.log(library);
     });
   });
-  /* Update Local Storage */
   localStorage.setItem('collections', JSON.stringify(displayBooksContainer.innerHTML));
   localStorage.setItem('library', JSON.stringify(library));
+  /* Update Local Storage */
 }
 
 window.onclick = () => {
