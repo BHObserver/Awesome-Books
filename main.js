@@ -4,6 +4,7 @@ let library = [];
 const displayBooksContainer = document.querySelector('.display-books-container');
 
 /* Adds a book in the library */
+
 add.addEventListener('click', () => {
   const book = {
     id: '',
@@ -30,7 +31,7 @@ add.addEventListener('click', () => {
   displayBookDetails.appendChild(displayTitle);
 
   const span = document.createElement('span');
-  span.innerText = 'by';
+  span.innerHTML = 'by&nbsp';
   displayBookDetails.appendChild(span);
 
   const displayAuthor = document.createElement('h5');
@@ -48,6 +49,15 @@ add.addEventListener('click', () => {
   library.push(book);
   displayTitle.innerText = book.title;
   displayAuthor.innerText = book.author;
+
+  if (library.length !== 0) {
+    displayBooksContainer.style.display = 'flex';
+  }
+
+  /* if (library.length % 2 === 0) {
+    displayBookDetails.style.background = 'rgba(6, 238, 33, 0.529)';
+    removeBtn.style.background = 'rgba(6, 238, 33, 0.529)';
+  } */
 
   /* Save to local Storage */
   localStorage.setItem('collections', JSON.stringify(displayBooksContainer.innerHTML));
@@ -67,12 +77,14 @@ function removeItem() {
       library = library.filter((b) => b.id !== id
               || b.title !== targetTitle
               || b.author !== targetAuthor);
-      console.log(library);
+      if (library.length === 0) {
+        displayBooksContainer.style.display = 'none';
+      }
     });
   });
+  /* Update Local Storage */
   localStorage.setItem('collections', JSON.stringify(displayBooksContainer.innerHTML));
   localStorage.setItem('library', JSON.stringify(library));
-  /* Update Local Storage */
 }
 
 window.onclick = () => {
@@ -91,3 +103,7 @@ function revive() {
 }
 
 revive();
+
+if (library.length === 0) {
+  displayBooksContainer.style.display = 'none';
+}
